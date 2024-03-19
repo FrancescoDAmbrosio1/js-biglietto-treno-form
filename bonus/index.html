@@ -10,30 +10,32 @@
     <section class="py-5">
         <div class="container">
             <div class="row">
-                <div class="col">
-                    <div class="card p-5">
+                <form id="form-submit" class="col">
+                    <div class="card p-5 bg-primary-subtle">
+                        <h2 class="text-dark text-center mb-3">Calcola il tuo biglietto</h2>
                         <div class="mb-3">
-                            <label for="km" class="form-label">Inserire i chilometri percorsi</label>
-                            <input type="text" class="form-control" id="km" placeholder="0.0">
+                            <!-- <label for="km" class="form-label">Inserire i chilometri percorsi</label> -->
+                            <input type="text" class="form-control" id="km" placeholder="Inserisci i chilometri percorsi">
                         </div>
                         <div class="mb-3">
-                            <label for="userAge" class="form-label">Inserire l'età del passeggero</label>
-                            <input type="text" class="form-control" id="userAge" placeholder="0">
-                        </div>
-                        <button id="submit" class="btn btn-primary">Invia</button>
+                            <label class="visually-hidden" for="userAge">Preference</label>
+                            <select class="form-select text-body-secondary" id="usareAge">
+                              <option selected>Seleziona la fascia d'età...</option>
+                              <option value="1">Minore di 18 anni</option>
+                              <option value="2">Maggiore di 65 anni</option>
+                              <option value="3">Compresa tra 18 e 65 anni</option>
+                            </select>
+                          </div>
+                        <button id="submit" type="submit"  class="btn btn-primary">Invia</button>
                     </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                        <div id="biglietto"></div>
-                    </div>
-                </div>
+                </form>
+                <div id="biglietto" class="col"></div>
             </div>
                 
             </div>
         </div>
-    </section>
+    </form>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="./js/app.js"></script>
+    <script src="./js-bonus/app.js"></script>
   </body>
 </html>
